@@ -8,11 +8,37 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
-
+    <header class="md:px-10">
+        <nav class="flex justify-between items-center bg-blue-100 py-2">
+            <div class="ml-5">
+                <h2 class="font-bold text-2xl">Interactive</h2>
+                <p class="text-xl text-gray-600">Geometry Book</p>
+            </div>
+            <div>
+                <button class="bg-blue-400 py-1 px-4 mr-5 rounded-lg text-white" onclick="blogPage()">Blog</button>
+            </div>
+        </nav>
     </header>
-    <main>
-
+    <main class="flex flex-col md:flex-row md:px-10 md:mt-10 md:justify-between">
+        <section class="flex flex-col md:flex-row md:w-[70%] md:mr-5">
+            <!-- Triangle Section Start-->
+            <div class="border-solid border-2 border-gray-200 px-10 flex flex-col items-center rounded-lg">
+                <img class="my-5" src="./images/triangle.png" alt="triangle">
+                <h2>Triangle</h2>
+                <h3 class="my-2">Area (A) = 0.5 x b x h</h3>
+                <div class="flex">
+                    <input type="text" placeholder="b" class="w-16 bg-gray-100 mr-4 pl-3 rounded-lg">
+                    <p>cm</p>
+                    <input type="text" placeholder="h" class="w-16 bg-gray-100 mx-4 pl-3 rounded-lg">
+                    <p>cm</p>
+                </div>
+                <button class="m-5 py-1 w-full bg-blue-600 rounded-lg text-white">Calculate</button>
+            </div>
+            <!-- Triangle Section End-->
+        </section>
+        <!-- <section class="md:w-[30%] bg-red-300 border-solid border-2 border-gray-200 px-5">
+            <h2 class="text-center underline font-semibold text-2xl py-5">Area Calculation</h2>
+        </section> -->
     </main>
     <!-- JavaScript link -->
     <script src="./js/script.js"></script>
