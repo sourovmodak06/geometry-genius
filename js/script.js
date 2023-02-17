@@ -12,6 +12,7 @@ function getColor(elementId){
     document.getElementById(elementId).style.backgroundColor = randomCode;
 }
 
+// common calculation
 function calculate(firstValue,secondValue){
     const valueOne = document.getElementById(firstValue).value;
     const valueTwo = document.getElementById(secondValue).value;
@@ -19,7 +20,14 @@ function calculate(firstValue,secondValue){
     return newValue;
 }
 
+// triangle
 document.getElementById('triangle-calculate').addEventListener('click',function(){
     const triangleArea = 0.5 * calculate('triangle-base','triangle-height');
-    console.log(triangleArea);
-})
+    // console.log(triangleArea);
+});
+
+// Rectangle
+document.getElementById('rectangle-calculate').addEventListener('click',function(){
+    const rectangleArea = calculate('rectangle-width','rectangle-length');
+    console.log(rectangleArea);
+});
