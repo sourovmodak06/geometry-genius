@@ -12,7 +12,7 @@
         <nav class="flex justify-between items-center bg-blue-100 py-2">
             <div class="ml-5">
                 <h2 class="font-bold text-2xl">Interactive</h2>
-                <p class="text-xl text-gray-600">Geometry Book</p>
+                <p class="text-xl text-gray-600">Geometry Genius</p>
             </div>
             <div>
                 <button class="bg-blue-400 py-1 px-4 mr-5 rounded-lg text-white" onclick="blogPage()">Blog</button>
@@ -24,7 +24,7 @@
             <!-- Triangle Section Start-->
             <div class="border-solid border-2 border-gray-200 px-5 flex flex-col items-center rounded-lg">
                 <img class="my-5" src="./images/triangle.png" alt="triangle">
-                <h2>Triangle</h2>
+                <h2 class="font-bold text-xl">Triangle</h2>
                 <h3 class="my-2">Area (A) = 0.5 x b x h</h3>
                 <div class="flex">
                     <input type="text" placeholder="b" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg">
@@ -40,12 +40,12 @@
             <!-- Rectangle Section Start-->
             <div class="border-solid border-2 border-gray-200 px-5 flex flex-col items-center rounded-lg">
                 <img class="my-5" src="./images/rectangle.png" alt="rectangle">
-                <h2>Rectangle</h2>
-                <h3 class="my-2">Area (A) = 0.5 x w x l</h3>
+                <h2 class="font-bold text-xl">Rectangle</h2>
+                <h3 class="my-2">Area (A) = w x l</h3>
                 <div class="flex">
-                    <input type="text" placeholder="b" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg">
+                    <input type="text" placeholder="w" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg">
                     <p>cm</p>
-                    <input type="text" placeholder="h" class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg">
+                    <input type="text" placeholder="l" class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg">
                     <p>cm</p>
                 </div>
                 <button class="m-5 py-1 w-full bg-blue-600 rounded-lg text-white">Calculate</button>
@@ -56,7 +56,7 @@
             <!-- Parallelogram Section Start-->
             <div class="border-solid border-2 border-gray-200 px-5 flex flex-col items-center rounded-lg">
                 <img class="my-5" src="./images/parallelogram.png" alt="parallelogram">
-                <h2>Parallelogram</h2>
+                <h2 class="font-bold text-xl">Parallelogram</h2>
                 <h3 class="my-2">Area (A) = b x h</h3>
                 <h2>b = <span>10</span>cm, h = <span>12</span>cm</h2>
                 <button class="m-5 py-1 w-full bg-blue-600 rounded-lg text-white">Calculate</button>
@@ -67,7 +67,7 @@
             <!-- Rhombus Section Start-->
             <div class="border-solid border-2 border-gray-200 px-5 flex flex-col items-center rounded-lg">
                 <img class="my-5" src="./images/rhombus.png" alt="rhombus">
-                <h2>Rhombus</h2>
+                <h2 class="font-bold text-xl">Rhombus</h2>
                 <h3 class="my-2">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></h3>
                 <h2>d<sub>1</sub> = <span>16</span>cm, d<sub>2</sub> = <span>8</span>cm</h2>
                 <button class="m-5 py-1 w-full bg-blue-600 rounded-lg text-white">Calculate</button>
@@ -78,7 +78,7 @@
             <!-- Pentagon Section Start-->
             <div class="border-solid border-2 border-gray-200 px-5 flex flex-col items-center rounded-lg">
                 <img class="my-5" src="./images/pentagon.png" alt="pentagon">
-                <h2>Pentagon</h2>
+                <h2 class="font-bold text-xl">Pentagon</h2>
                 <h3 class="my-2">Area (A) = 0.5 x p x b</h3>
                 <h2>p = <span>6</span>cm, b = <span>10</span>cm</h2>
                 <button class="m-5 py-1 w-full bg-blue-600 rounded-lg text-white">Calculate</button>
@@ -89,15 +89,22 @@
             <!-- Ellipse Section Start-->
             <div class="border-solid border-2 border-gray-200 px-5 flex flex-col items-center rounded-lg">
                 <img class="my-5" src="./images/ellipse.png" alt="ellipse">
-                <h2>Ellipse</h2>
+                <h2 class="font-bold text-xl">Ellipse</h2>
                 <h3 class="my-2">Area (A) = &pi;ab</h3>
                 <h2>a = <span>10</span>cm, b = <span>4</span>cm</h2>
                 <button class="m-5 py-1 w-full bg-blue-600 rounded-lg text-white">Calculate</button>
             </div>
             <!-- Ellipse Section End-->
         </section>
+
+        <!-- Area Calculation section -->
         <section class="md:w-[30%] border-solid border-2 border-gray-200 px-5">
             <h2 class="text-center underline font-semibold text-2xl py-5">Area Calculation</h2>
+            <table>
+                <tbody>
+                    
+                </tbody>
+            </table>
         </section>
     </main>
     <!-- JavaScript link -->
