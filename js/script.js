@@ -16,8 +16,17 @@ function getColor(elementId){
 function calculate(firstValue,secondValue){
     const valueOne = document.getElementById(firstValue).value;
     const valueTwo = document.getElementById(secondValue).value;
-    const newValue = parseFloat(valueOne) * parseFloat(valueTwo);
-    return newValue;
+
+    if (valueOne == "") {
+        alert('Please Enter First Value');
+    }
+    else if(valueTwo == ""){
+        alert('Please Enter Second Value');
+    } 
+    else {
+        const newValue = parseFloat(valueOne) * parseFloat(valueTwo);
+        return newValue;
+    }
 }
 
 // validation
