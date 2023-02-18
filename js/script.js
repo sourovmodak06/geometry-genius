@@ -17,10 +17,10 @@ function calculate(firstValue,secondValue){
     const valueOne = document.getElementById(firstValue).value;
     const valueTwo = document.getElementById(secondValue).value;
 
-    if (valueOne == "") {
+    if (valueOne === "" || isNaN(valueOne)) {
         alert('Please Enter First Value');
     }
-    else if(valueTwo == ""){
+    else if(valueTwo === "" || isNaN(valueTwo)){
         alert('Please Enter Second Value');
     } 
     else {
@@ -48,6 +48,7 @@ function validation(element,elementId){
             }
         }
 }
+
 // Name 
 function nameOfArea(elementIdData){
     const nameData = document.getElementById(elementIdData).innerText;
@@ -63,12 +64,16 @@ let serial = 0;
 
 // triangle
 document.getElementById('triangle-calculate').addEventListener('click',function(){
-    serial += 1;
-    const triangleArea = 0.5 * calculate('triangle-base','triangle-height');
-    const triangleAreaFixed = triangleArea.toFixed(2);
-    
-    const name = nameOfArea('nameTriangle');
-    displayData(name,triangleArea);
+    if (calculate('triangle-base','triangle-height').length === 0) {
+        alert('Please enter Value');
+    }
+    else{
+        serial += 1;
+        const triangleArea = 0.5 * calculate('triangle-base','triangle-height');
+        const triangleAreaFixed = triangleArea.toFixed(2);
+        const name = nameOfArea('nameTriangle');
+        displayData(name,triangleAreaFixed);
+    }
 });
 document.getElementById('triangle-edit').addEventListener('click',function(){
     editValue('triangle-show');
@@ -76,12 +81,15 @@ document.getElementById('triangle-edit').addEventListener('click',function(){
 
 // Rectangle
 document.getElementById('rectangle-calculate').addEventListener('click',function(){
-    serial += 1;
-    const rectangleArea = calculate('rectangle-width','rectangle-length');
-    const rectangleAreaFixed = rectangleArea.toFixed(2);
-
-    const name = nameOfArea('nameRectangle');
-    displayData(name,rectangleAreaFixed);
+    if (calculate('rectangle-width','rectangle-length').length === 0) {
+        alert('Please enter Value');
+    } else {
+        serial += 1;
+        const rectangleArea = calculate('rectangle-width','rectangle-length');
+        const rectangleAreaFixed = rectangleArea.toFixed(2);
+        const name = nameOfArea('nameRectangle');
+        displayData(name,rectangleAreaFixed);
+    }
 });
 document.getElementById('rectangle-edit').addEventListener('click',function(){
     editValue('rectangle-show');
@@ -89,12 +97,15 @@ document.getElementById('rectangle-edit').addEventListener('click',function(){
 
 // Parallelogram
 document.getElementById('parallelogram-calculate').addEventListener('click',function(){
-    serial += 1;
-    const parallelogramArea = calculate('parallelogram-base','parallelogram-height');
-    const parallelogramAreaFixed = parallelogramArea.toFixed(2);
-    
-    const name = nameOfArea('nameParallelogram');
-    displayData(name,parallelogramAreaFixed);
+    if (calculate('parallelogram-base','parallelogram-height').length === 0) {
+        alert('Please enter Value');
+    } else {
+        serial += 1;
+        const parallelogramArea = calculate('parallelogram-base','parallelogram-height');
+        const parallelogramAreaFixed = parallelogramArea.toFixed(2);
+        const name = nameOfArea('nameParallelogram');
+        displayData(name,parallelogramAreaFixed);
+    }
 });
 document.getElementById('parallelogram-edit').addEventListener('click',function(){
     editValue('parallelogram-show');
@@ -102,12 +113,15 @@ document.getElementById('parallelogram-edit').addEventListener('click',function(
 
 // Rhombus
 document.getElementById('rhombus-calculate').addEventListener('click',function(){
-    serial += 1;
-    const rhombusArea = 0.5 * calculate('rhombus-diagonal-one','rhombus-diagonal-two');
-    const rhombusAreaFixed = rhombusArea.toFixed(2);
-    
-    const name = nameOfArea('nameRhombus');
-    displayData(name,rhombusAreaFixed);
+    if (calculate('rhombus-diagonal-one','rhombus-diagonal-two').length === 0) {
+        alert('Please enter Value');
+    } else {
+        serial += 1;
+        const rhombusArea = 0.5 * calculate('rhombus-diagonal-one','rhombus-diagonal-two');
+        const rhombusAreaFixed = rhombusArea.toFixed(2);
+        const name = nameOfArea('nameRhombus');
+        displayData(name,rhombusAreaFixed);
+    }
 });
 document.getElementById('rhombus-edit').addEventListener('click',function(){
     editValue('rhombus-show');
@@ -115,12 +129,15 @@ document.getElementById('rhombus-edit').addEventListener('click',function(){
 
 // Pentagon
 document.getElementById('pentagon-calculate').addEventListener('click',function(){
-    serial += 1;
-    const pentagonArea = 0.5 * calculate('pentagon-first-filed','pentagon-second-filed');
-    const pentagonAreaFixed = pentagonArea.toFixed(2);
-    
-    const name = nameOfArea('namePentagon');
-    displayData(name,pentagonAreaFixed);
+    if (calculate('pentagon-first-filed','pentagon-second-filed').length === 0) {
+        alert('Please enter Value');
+    } else {
+        serial += 1;
+        const pentagonArea = 0.5 * calculate('pentagon-first-filed','pentagon-second-filed');
+        const pentagonAreaFixed = pentagonArea.toFixed(2);
+        const name = nameOfArea('namePentagon');
+        displayData(name,pentagonAreaFixed);
+    }
 });
 document.getElementById('pentagon-edit').addEventListener('click',function(){
     editValue('pentagon-show');
@@ -128,12 +145,15 @@ document.getElementById('pentagon-edit').addEventListener('click',function(){
 
 // Ellipse
 document.getElementById('ellipse-calculate').addEventListener('click',function(){
-    serial += 1;
-    const ellipseArea = 3.1416 * calculate('ellipse-a-axis','ellipse-b-axis');
-    const ellipseAreaFixed = ellipseArea.toFixed(2);
-    
-    const name = nameOfArea('nameEllipse');
-    displayData(name,ellipseAreaFixed);
+    if (calculate('ellipse-a-axis','ellipse-b-axis').length === 0) {
+        alert('Please enter Value');
+    } else {
+        serial += 1;
+        const ellipseArea = 3.1416 * calculate('ellipse-a-axis','ellipse-b-axis');
+        const ellipseAreaFixed = ellipseArea.toFixed(2);
+        const name = nameOfArea('nameEllipse');
+        displayData(name,ellipseAreaFixed);   
+    }
 });
 document.getElementById('ellipse-edit').addEventListener('click',function(){
     editValue('ellipse-show');
@@ -144,16 +164,15 @@ document.getElementById('ellipse-edit').addEventListener('click',function(){
 function displayData(areaName,area) {
     const container = document.getElementById("table-container");
     const tr = document.createElement("tr");
-    tr.style.display = 'flex';
-    tr.style.alignItems = 'center';
+    tr.style.display = 'grid';
+    tr.style.gridTemplateColumns = 'auto auto auto auto';
     tr.style.margin ='16px 0';
 
     tr.innerHTML = `
       <td class="mr-4">${serial}</td>
       <td>${areaName}</td>
       <td class="ml-2">${area}cm<sup>2</sup></td>
-      <td class="text-white bg-blue-600 px-3 rounded-lg ml-4">Covert to m<sup>2</sup></td>      
+      <td class="text-white bg-blue-600 px-3 rounded-lg cursor-pointer ml-2">Convert to m<sup>2</sup></td>      
     `;
     container.appendChild(tr);
-    document.getElementById("total-product").innerText = serial;
 }
