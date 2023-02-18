@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry - Home</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -24,13 +27,17 @@
             <!-- Triangle Section Start-->
             <div class="border-solid border-2 border-gray-200 px-5 flex flex-col items-center rounded-lg mt-4 md:mt-0" onmouseenter="getColor('triangle')" id="triangle">
                 <img class="my-5" src="./images/triangle.png" alt="triangle">
-                <h2 class="font-bold text-xl">Triangle</h2>
-                <h3 class="my-2">Area (A) = 0.5 x b x h</h3>
-                <div class="flex">
-                    <input id="triangle-base" type="text" placeholder="b" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'triangle-base-message')">
-                    <p>cm</p>
-                    <input id="triangle-height" type="text" placeholder="h" class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'triangle-height-message')">
-                    <p>cm</p>
+                <h2 class="font-bold text-xl" id="nameTriangle">Triangle</h2>
+                <h3 class="my-2">Area (A) = 0.5 x b x h 
+                    <i id="triangle-edit" class="fa fa-pencil-square-o ml-2 text-xl font-semibold cursor-pointer"></i>
+                </h3>
+                <div class="hidden" id="triangle-show">
+                    <div class="flex">
+                        <input id="triangle-base" type="text" placeholder="b" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'triangle-base-message')" required>
+                        <p>cm</p>
+                        <input id="triangle-height" type="text" placeholder="h" class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'triangle-height-message')" required>
+                        <p>cm</p>
+                    </div>
                 </div>
                 <div id="triangle-base-message" class="text-red-700 mt-2"></div>
                 <div id="triangle-height-message" class="text-red-700 mt-2"></div>
@@ -42,13 +49,17 @@
             <!-- Rectangle Section Start-->
             <div class="border-solid border-2 border-gray-200 px-5 flex flex-col items-center rounded-lg" onmouseenter="getColor('rectangle')" id="rectangle">
                 <img class="my-5" src="./images/rectangle.png" alt="rectangle">
-                <h2 class="font-bold text-xl">Rectangle</h2>
-                <h3 class="my-2">Area (A) = w x l</h3>
-                <div class="flex">
-                    <input id="rectangle-width" type="text" placeholder="w" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'rectangle-width-message')">
-                    <p>cm</p>
-                    <input id="rectangle-length" type="text" placeholder="l" class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'rectangle-length-message')">
-                    <p>cm</p>
+                <h2 class="font-bold text-xl" id="nameRectangle">Rectangle</h2>
+                <h3 class="my-2">Area (A) = w x l
+                    <i id="rectangle-edit" class="fa fa-pencil-square-o ml-2 text-xl font-semibold cursor-pointer"></i>
+                </h3>
+                <div class="hidden" id="rectangle-show">
+                    <div class="flex">
+                        <input id="rectangle-width" type="text" placeholder="w" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'rectangle-width-message')">
+                        <p>cm</p>
+                        <input id="rectangle-length" type="text" placeholder="l" class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'rectangle-length-message')">
+                        <p>cm</p>
+                    </div>
                 </div>
                 <div id="rectangle-width-message" class="text-red-700 mt-2"></div>
                 <div id="rectangle-length-message" class="text-red-700 mt-2"></div>
@@ -60,13 +71,17 @@
             <!-- Parallelogram Section Start-->
             <div class="border-solid border-2 border-gray-200 px-5 flex flex-col items-center rounded-lg" onmouseenter="getColor('parallelogram')" id="parallelogram">
                 <img class="my-5" src="./images/parallelogram.png" alt="parallelogram">
-                <h2 class="font-bold text-xl">Parallelogram</h2>
-                <h3 class="my-2">Area (A) = b x h</h3>
-                <div class="flex">
-                    <input id="parallelogram-base" type="text" placeholder="b" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'parallelogram-base-message')">
-                    <p>cm</p>
-                    <input id="parallelogram-height" type="text" placeholder="h" class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'parallelogram-height-message')">
-                    <p>cm</p>
+                <h2 class="font-bold text-xl" id="nameParallelogram">Parallelogram</h2>
+                <h3 class="my-2">Area (A) = b x h
+                    <i id="parallelogram-edit" class="fa fa-pencil-square-o ml-2 text-xl font-semibold cursor-pointer"></i>
+                </h3>
+                <div class="hidden" id="parallelogram-show">
+                    <div class="flex">
+                        <input id="parallelogram-base" type="text" placeholder="b" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'parallelogram-base-message')">
+                        <p>cm</p>
+                        <input id="parallelogram-height" type="text" placeholder="h" class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'parallelogram-height-message')">
+                        <p>cm</p>
+                    </div>
                 </div>
                 <div id="parallelogram-base-message" class="text-red-700 mt-2"></div>
                 <div id="parallelogram-height-message" class="text-red-700 mt-2"></div>
@@ -78,13 +93,17 @@
             <!-- Rhombus Section Start-->
             <div class="border-solid border-2 border-gray-200 px-5 flex flex-col items-center rounded-lg" onmouseenter="getColor('rhombus')" id="rhombus">
                 <img class="my-5" src="./images/rhombus.png" alt="rhombus">
-                <h2 class="font-bold text-xl">Rhombus</h2>
-                <h3 class="my-2">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></h3>
-                <div class="flex">
-                    <input id="rhombus-diagonal-one" type="text" placeholder="d1" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'rhombus-diagonal-one-message')">
-                    <p>cm</p>
-                    <input id="rhombus-diagonal-two" type="text" placeholder='d2' class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'rhombus-diagonal-two-message')">
-                    <p>cm</p>
+                <h2 class="font-bold text-xl" id="nameRhombus">Rhombus</h2>
+                <h3 class="my-2">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub>
+                    <i id="rhombus-edit" class="fa fa-pencil-square-o ml-2 text-xl font-semibold cursor-pointer"></i>
+                </h3>
+                <div class="hidden" id="rhombus-show">
+                    <div class="flex">
+                        <input id="rhombus-diagonal-one" type="text" placeholder="d1" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'rhombus-diagonal-one-message')">
+                        <p>cm</p>
+                        <input id="rhombus-diagonal-two" type="text" placeholder='d2' class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'rhombus-diagonal-two-message')">
+                        <p>cm</p>
+                    </div>
                 </div>
                 <div id="rhombus-diagonal-one-message" class="text-red-700 mt-2"></div>
                 <div id="rhombus-diagonal-two-message" class="text-red-700 mt-2"></div>
@@ -96,13 +115,17 @@
             <!-- Pentagon Section Start-->
             <div class="border-solid border-2 border-gray-200 px-5 flex flex-col items-center rounded-lg" onmouseenter="getColor('pentagon')" id="pentagon">
                 <img class="my-5" src="./images/pentagon.png" alt="pentagon">
-                <h2 class="font-bold text-xl">Pentagon</h2>
-                <h3 class="my-2">Area (A) = 0.5 x p x b</h3>
-                <div class="flex">
-                    <input id="pentagon-first-filed" type="text" placeholder="p" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'pentagon-first-filed-message')">
-                    <p>cm</p>
-                    <input id="pentagon-second-filed" type="text" placeholder='b' class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'pentagon-second-filed-message')">
-                    <p>cm</p>
+                <h2 class="font-bold text-xl" id="namePentagon">Pentagon</h2>
+                <h3 class="my-2">Area (A) = 0.5 x p x b
+                    <i id="pentagon-edit" class="fa fa-pencil-square-o ml-2 text-xl font-semibold cursor-pointer"></i>
+                </h3>
+                <div class="hidden" id="pentagon-show">
+                    <div class="flex">
+                        <input id="pentagon-first-filed" type="text" placeholder="p" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'pentagon-first-filed-message')">
+                        <p>cm</p>
+                        <input id="pentagon-second-filed" type="text" placeholder='b' class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'pentagon-second-filed-message')">
+                        <p>cm</p>
+                    </div>
                 </div>
                 <div id="pentagon-first-filed-message" class="text-red-700 mt-2"></div>
                 <div id="pentagon-second-filed-message" class="text-red-700 mt-2"></div>
@@ -114,13 +137,17 @@
             <!-- Ellipse Section Start-->
             <div class="border-solid border-2 border-gray-200 px-5 flex flex-col items-center rounded-lg" onmouseenter="getColor('ellipse')" id="ellipse">
                 <img class="my-5" src="./images/ellipse.png" alt="ellipse">
-                <h2 class="font-bold text-xl">Ellipse</h2>
-                <h3 class="my-2">Area (A) = &pi;ab</h3>
-                <div class="flex">
-                    <input id="ellipse-a-axis" type="text" placeholder="a" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'ellipse-a-axis-message')">
-                    <p>cm</p>
-                    <input id="ellipse-b-axis" type="text" placeholder='b' class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'ellipse-b-axis-message')">
-                    <p>cm</p>
+                <h2 class="font-bold text-xl" id="nameEllipse">Ellipse</h2>
+                <h3 class="my-2">Area (A) = &pi;ab
+                    <i id="ellipse-edit" class="fa fa-pencil-square-o ml-2 text-xl font-semibold cursor-pointer"></i>
+                </h3>
+                <div class="hidden" id="ellipse-show">
+                    <div class="flex">
+                        <input id="ellipse-a-axis" type="text" placeholder="a" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'ellipse-a-axis-message')">
+                        <p>cm</p>
+                        <input id="ellipse-b-axis" type="text" placeholder='b' class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'ellipse-b-axis-message')">
+                        <p>cm</p>
+                    </div>
                 </div>
                 <div id="ellipse-a-axis-message" class="text-red-700 mt-2"></div>
                 <div id="ellipse-b-axis-message" class="text-red-700 mt-2"></div>
@@ -133,13 +160,7 @@
         <section class="md:w-[30%] h-full pb-10 border-solid border-2 border-gray-200 px-5 mt-5 md:mt-0 rounded-lg">
             <h2 class="text-center underline font-semibold text-2xl py-5">Area Calculation</h2>
             <table>
-                <tbody>
-                    <tr class="flex items-center my-4">
-                        <td>1.</td>
-                        <td class="mx-4">Triangle</td>
-                        <td>12cm<sup>2</sup></td>
-                        <td class="text-white bg-blue-600 px-3 rounded-lg ml-4">Covert to m<sup>2</sup></td>
-                    </tr>
+                <tbody id="table-container">
                 </tbody>
             </table>
         </section>
