@@ -49,3 +49,9 @@ document.getElementById('pentagon-calculate').addEventListener('click',function(
     const pentagonArea = 0.5 * calculate('pentagon-first-filed','pentagon-second-filed');
     console.log(pentagonArea);
 });
+
+// Ellipse
+document.getElementById('ellipse-calculate').addEventListener('click',function(){
+    const ellipseArea = 3.1416 * calculate('ellipse-a-axis','ellipse-b-axis');
+    console.log(ellipseArea);
+});
