@@ -29,11 +29,17 @@ document.getElementById('triangle-calculate').addEventListener('click',function(
 // Rectangle
 document.getElementById('rectangle-calculate').addEventListener('click',function(){
     const rectangleArea = calculate('rectangle-width','rectangle-length');
-    console.log(rectangleArea);
+    // console.log(rectangleArea);
 });
 
-// ParallelogramArea
+// Parallelogram
 document.getElementById('parallelogram-calculate').addEventListener('click',function(){
     const parallelogramArea = calculate('parallelogram-base','parallelogram-height');
     console.log(parallelogramArea);
+});
+
+// Rhombus
+document.getElementById('rhombus-calculate').addEventListener('click',function(){
+    const rhombusArea = 0.5 * calculate('rhombus-diagonal-one','rhombus-diagonal-two');
+    console.log(rhombusArea);
 });
