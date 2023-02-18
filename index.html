@@ -27,11 +27,13 @@
                 <h2 class="font-bold text-xl">Triangle</h2>
                 <h3 class="my-2">Area (A) = 0.5 x b x h</h3>
                 <div class="flex">
-                    <input id="triangle-base" type="text" placeholder="b" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg">
+                    <input id="triangle-base" type="text" placeholder="b" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'triangle-base-message')">
                     <p>cm</p>
-                    <input id="triangle-height" type="text" placeholder="h" class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg">
+                    <input id="triangle-height" type="text" placeholder="h" class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'triangle-height-message')">
                     <p>cm</p>
                 </div>
+                <div id="triangle-base-message" class="text-red-700 mt-2"></div>
+                <div id="triangle-height-message" class="text-red-700 mt-2"></div>
                 <button id="triangle-calculate" class="m-5 py-1 w-full bg-blue-600 rounded-lg text-white">Calculate</button>
             </div>
             <!-- Triangle Section End-->
@@ -43,11 +45,13 @@
                 <h2 class="font-bold text-xl">Rectangle</h2>
                 <h3 class="my-2">Area (A) = w x l</h3>
                 <div class="flex">
-                    <input id="rectangle-width" type="text" placeholder="w" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg">
+                    <input id="rectangle-width" type="text" placeholder="w" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'rectangle-width-message')">
                     <p>cm</p>
-                    <input id="rectangle-length" type="text" placeholder="l" class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg">
+                    <input id="rectangle-length" type="text" placeholder="l" class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'rectangle-length-message')">
                     <p>cm</p>
                 </div>
+                <div id="rectangle-width-message" class="text-red-700 mt-2"></div>
+                <div id="rectangle-length-message" class="text-red-700 mt-2"></div>
                 <button id="rectangle-calculate" class="m-5 py-1 w-full bg-blue-600 rounded-lg text-white">Calculate</button>
             </div>
             <!-- Rectangle Section End-->
@@ -59,11 +63,13 @@
                 <h2 class="font-bold text-xl">Parallelogram</h2>
                 <h3 class="my-2">Area (A) = b x h</h3>
                 <div class="flex">
-                    <input id="parallelogram-base" type="text" placeholder="b" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg">
+                    <input id="parallelogram-base" type="text" placeholder="b" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'parallelogram-base-message')">
                     <p>cm</p>
-                    <input id="parallelogram-height" type="text" placeholder="h" class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg">
+                    <input id="parallelogram-height" type="text" placeholder="h" class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'parallelogram-height-message')">
                     <p>cm</p>
                 </div>
+                <div id="parallelogram-base-message" class="text-red-700 mt-2"></div>
+                <div id="parallelogram-height-message" class="text-red-700 mt-2"></div>
                 <button id="parallelogram-calculate" class="m-5 py-1 w-full bg-blue-600 rounded-lg text-white">Calculate</button>
             </div>
             <!-- Parallelogram Section End-->
@@ -75,11 +81,13 @@
                 <h2 class="font-bold text-xl">Rhombus</h2>
                 <h3 class="my-2">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></h3>
                 <div class="flex">
-                    <input id="rhombus-diagonal-one" type="text" placeholder="d1" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg">
+                    <input id="rhombus-diagonal-one" type="text" placeholder="d1" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'rhombus-diagonal-one-message')">
                     <p>cm</p>
-                    <input id="rhombus-diagonal-two" type="text" placeholder='d2' class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg">
+                    <input id="rhombus-diagonal-two" type="text" placeholder='d2' class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'rhombus-diagonal-two-message')">
                     <p>cm</p>
                 </div>
+                <div id="rhombus-diagonal-one-message" class="text-red-700 mt-2"></div>
+                <div id="rhombus-diagonal-two-message" class="text-red-700 mt-2"></div>
                 <button id="rhombus-calculate" class="m-5 py-1 w-full bg-blue-600 rounded-lg text-white">Calculate</button>
             </div>
             <!-- Rhombus Section End-->
@@ -91,11 +99,13 @@
                 <h2 class="font-bold text-xl">Pentagon</h2>
                 <h3 class="my-2">Area (A) = 0.5 x p x b</h3>
                 <div class="flex">
-                    <input id="pentagon-first-filed" type="text" placeholder="p" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg">
+                    <input id="pentagon-first-filed" type="text" placeholder="p" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'pentagon-first-filed-message')">
                     <p>cm</p>
-                    <input id="pentagon-second-filed" type="text" placeholder='b' class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg">
+                    <input id="pentagon-second-filed" type="text" placeholder='b' class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'pentagon-second-filed-message')">
                     <p>cm</p>
                 </div>
+                <div id="pentagon-first-filed-message" class="text-red-700 mt-2"></div>
+                <div id="pentagon-second-filed-message" class="text-red-700 mt-2"></div>
                 <button id="pentagon-calculate" class="m-5 py-1 w-full bg-blue-600 rounded-lg text-white">Calculate</button>
             </div>
             <!-- Pentagon Section End-->
@@ -107,11 +117,13 @@
                 <h2 class="font-bold text-xl">Ellipse</h2>
                 <h3 class="my-2">Area (A) = &pi;ab</h3>
                 <div class="flex">
-                    <input id="ellipse-a-axis" type="text" placeholder="a" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg">
+                    <input id="ellipse-a-axis" type="text" placeholder="a" class="w-16 bg-gray-200 mr-4 pl-3 rounded-lg" onkeyup="validation(this,'ellipse-a-axis-message')">
                     <p>cm</p>
-                    <input id="ellipse-b-axis" type="text" placeholder='b' class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg">
+                    <input id="ellipse-b-axis" type="text" placeholder='b' class="w-16 bg-gray-200 mx-4 pl-3 rounded-lg" onkeyup="validation(this,'ellipse-b-axis-message')">
                     <p>cm</p>
                 </div>
+                <div id="ellipse-a-axis-message" class="text-red-700 mt-2"></div>
+                <div id="ellipse-b-axis-message" class="text-red-700 mt-2"></div>
                 <button id="ellipse-calculate" class="m-5 py-1 w-full bg-blue-600 rounded-lg text-white">Calculate</button>
             </div>
             <!-- Ellipse Section End-->
