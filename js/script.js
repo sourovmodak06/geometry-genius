@@ -31,3 +31,9 @@ document.getElementById('rectangle-calculate').addEventListener('click',function
     const rectangleArea = calculate('rectangle-width','rectangle-length');
     console.log(rectangleArea);
 });
+
+// ParallelogramArea
+document.getElementById('parallelogram-calculate').addEventListener('click',function(){
+    const parallelogramArea = calculate('parallelogram-base','parallelogram-height');
+    console.log(parallelogramArea);
+});
