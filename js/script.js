@@ -43,3 +43,9 @@ document.getElementById('rhombus-calculate').addEventListener('click',function()
     const rhombusArea = 0.5 * calculate('rhombus-diagonal-one','rhombus-diagonal-two');
     console.log(rhombusArea);
 });
+
+// Pentagon
+document.getElementById('pentagon-calculate').addEventListener('click',function(){
+    const pentagonArea = 0.5 * calculate('pentagon-first-filed','pentagon-second-filed');
+    console.log(pentagonArea);
+});
